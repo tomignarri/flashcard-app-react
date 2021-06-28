@@ -8,9 +8,15 @@ import {
 
 function Header() {
   return (
-    <div>
+    <header>
       
-    </div>
+      <div className="menu">
+        <Link to="/">Home</Link>
+        <Link to="/study">Study</Link>
+        <div>React Login</div>
+      </div>
+    </header>
+    
   );
 };
 

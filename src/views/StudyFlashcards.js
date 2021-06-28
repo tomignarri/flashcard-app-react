@@ -5,13 +5,16 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Header from "../components/Header";
 
-function FlashcardDecks() {
+function StudyFlashcards() {
   return (
     <div>
+        <Header />
+        Study Here
       
     </div>
   );
 };
 
-export default FlashcardDecks;
+export default StudyFlashcards;

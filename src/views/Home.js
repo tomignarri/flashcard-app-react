@@ -5,11 +5,20 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Header from "../components/Header";
+import HomePageCards from "../components/HomePageCards";
 
 function Home() {
   return (
     <div>
-      You're at the homepage
+        <Header />
+        <div className="homePageContent">
+            
+            <HomePageCards name="Make a New Deck" />
+            <HomePageCards name="Your Decks" />
+            <HomePageCards name="Study"/>
+
+        </div>
     </div>
   );
 };
