@@ -1,22 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import Login from "./Login";
 
 function Header() {
-  return (
-    <header>
-      
-      <div className="menu">
-        <Link to="/">Home</Link>
-        <Link to="/study">Study</Link>
-        <div>React Login</div>
-      </div>
-    </header>
+
+const [token, setToken] = useState();  
     
+return (
+    <header>
+        <div className="menu">
+            <Link to="/">Home</Link>
+            <Link to="/study">Study</Link>
+            <Login />
+        </div>
+    </header>
   );
 };
 

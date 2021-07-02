@@ -3,8 +3,12 @@ import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './views/Home';
 import StudyFlashcards from './views/StudyFlashcards';
+import React, {useState} from "react";
 
 function App() {
+
+  
+
   return (
     <div className="App">
       <BrowserRouter>
