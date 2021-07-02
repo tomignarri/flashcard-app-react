@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import PropTypes from 'prop-types';
+import useToken from "../hooks/useToken"
 
 async function loginUser(credentials) {
     return fetch('http://localhost:8080/login', {
@@ -12,9 +12,10 @@ async function loginUser(credentials) {
     .then(data => data.json())
 }
 
-function Login({setToken}) {
+function Login() {
     const [username, setUserName] = useState();
     const [password, setPassword] = useState();
+    const { token, setToken } = useToken(); 
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -23,6 +24,10 @@ function Login({setToken}) {
             password
         });
         setToken(token);
+    }
+
+    if(token){
+        return <div>You are logged in</div>  
     }
 
     return (
@@ -35,9 +40,5 @@ function Login({setToken}) {
         </div>
     );
 };
-
-Login.propTypes = {
-    setToken: PropTypes.func.isRequired
-}
 
 export default Login;
